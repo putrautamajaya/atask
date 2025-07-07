@@ -11,10 +11,6 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/atask",
-    element: <App />,
-  },
-  {
     path: "/example/:exampleId",
     element: <ExamplePage />,
   },
