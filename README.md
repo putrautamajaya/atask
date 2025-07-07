@@ -1,54 +1,83 @@
-# React + TypeScript + Vite
+## Author
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **Name:** Putra Utama Jaya
+- **LinkedIn:** [https://www.linkedin.com/in/putra-utama-jaya/](https://www.linkedin.com/in/putra-utama-jaya/)# GitHub Repositories Explorer
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Create a React application integrating with the GitHub API. Users can search for up to **5 GitHub users** whose usernames match a given input. Upon selecting a user, the application displays all repositories for that user without limit.
 
-## Expanding the ESLint configuration
+- **API documentation:** [GitHub REST API v3](https://developer.github.com/v3/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Search for GitHub users by username.
+- Display up to 5 matching users.
+- View all repositories for a selected user.
+
+## Technologies & Dependencies
+
+- **Framework & Libraries:**
+  - React ^19.0.0
+  - React Router DOM ^7.5.0
+  - Zustand ^5.0.3 (state management)
+- **UI & Styling:**
+  - Mantine (core & hooks) ^8.1.2
+  - Tabler Icons React ^3.34.0
+  - Tailwind CSS ^4.1.4
+  - @tailwindcss/vite ^4.1.4
+- **Data & HTTP:**
+  - Axios ^1.8.4
+
+## Setup & Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone <your-repo-url>
+   cd github-repos-explorer
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   # or
+   pnpm install
+   ```
+
+3. **Start the development server:**
+
+   ```bash
+   npm run dev
+   # or
+   pnpm dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173/` (or the port shown in the console).
+
+## Usage
+
+1. Enter a GitHub username or keyword in the search input.
+2. The app shows up to 5 users with matching usernames.
+3. Click a user to load and display all of their repositories.
+4. Browse repositories; use sorting or searching within the list if implemented.
+
+## Project Structure
+
+```
+src/
+├── components/       # Reusable UI components
+├── pages/            # Route components (Home, UserDetails)
+├── store/            # Zustand stores for state management
+└── App.tsx           # Main Application
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## API Integration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Search Users:** `GET https://api.github.com/search/users?q={query}&per_page=5`
+- **List Repos:** `GET https://api.github.com/users/{username}/repos`
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+_Happy coding!_

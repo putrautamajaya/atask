@@ -13,7 +13,7 @@ export const getRepositories = async (username: string) => {
 export const getUsers = async (username: string) => {
   try {
     return await axiosInstance.get(
-      `https://api.github.com/search/users?q=${username}`
+      `https://api.github.com/search/users?q=${username}&per_page=5`
     );
   } catch {
     return "";
