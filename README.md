@@ -5,6 +5,8 @@
 
 # GitHub Repositories Explorer
 
+- **Demo:** [https://putrautamajaya.github.io/atask/](https://putrautamajaya.github.io/atask/)
+
 ## Description
 
 Create a React application integrating with the GitHub API. Users can search for up to **5 GitHub users** whose usernames match a given input. Upon selecting a user, the application displays all repositories for that user without limit.
