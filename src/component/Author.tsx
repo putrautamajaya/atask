@@ -15,7 +15,7 @@ const Author = () => {
       <div>
         github:{" "}
         <a
-          href="https://www.linkedin.com/in/putra-utama-jaya/"
+          href="https://github.com/putrautamajaya/atask.git"
           target="_blank"
           rel="noreferrer"
         >

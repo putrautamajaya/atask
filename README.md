@@ -1,7 +1,9 @@
 ## Author
 
 - **Name:** Putra Utama Jaya
-- **LinkedIn:** [https://www.linkedin.com/in/putra-utama-jaya/](https://www.linkedin.com/in/putra-utama-jaya/)# GitHub Repositories Explorer
+- **LinkedIn:** [https://www.linkedin.com/in/putra-utama-jaya/](https://www.linkedin.com/in/putra-utama-jaya/)
+
+# GitHub Repositories Explorer
 
 ## Description
 
